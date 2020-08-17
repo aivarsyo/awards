@@ -1,5 +1,80 @@
-$bg: red;
+@font-face {
+    font-family: 'Ginto';
+    src: url('../fonts/GintoNordTrial-Regular.woff') format('woff');
+  }
 
-body{
-    background: $bg;
+  body{
+    font-family: 'Ginto';
+    margin: 0;
+  }
+
+  .awardsblock__h{
+      display: flex;
+      flex-direction: column;
+      font-size: 2vw;
+  }
+
+  .link--underline{
+      color: black;
+  }
+
+  .awardsblock{
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+  }
+
+  .awardsblock__container{
+      grid-column: 1/2;
+      grid-row: 1/2;
+      padding-left: 1vw;
+  }
+
+  .glide{
+      grid-column: 1/3;
+      grid-row: 2/3;
+  }
+
+  .glide__slide img {
+      width: 15vw;
+      height: auto;
+  }
+
+  .glide__slides{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0;
+  }
+
+  ul{
+      list-style-type: none;
+  }
+
+  .glide__slide{
+      animation: slideOut 5s linear;
+  }
+
+  .glide__slide__anim{
+    animation: moveToRight 10s linear infinite;
+  }
+
+@keyframes slideOut {
+    to{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes moveToRight{
+    from{
+        transform: translateX(100vw);
+    }
+    to{
+        transform: translateX(-100vw);
+    }
+}
+
+.glide__track{
+    display: flex;
+    flex-direction: row;
 }
