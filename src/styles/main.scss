@@ -9,15 +9,9 @@ font-family: 'Ginto';
 margin: 0;
 }
 
-  
-
 .link--underline{
 	color: black;
 }
-
-
-
-
 
 .awardsblock{
 	display: grid;
@@ -27,7 +21,7 @@ margin: 0;
 
 
 	&__container{
-		grid-column: 1 / span 2;
+		grid-column: 1 / span 1;
 		grid-row: 1 / span 1;
 
 		padding-left: 1vw;
@@ -41,95 +35,28 @@ margin: 0;
 	}
 }
 
-
-
-
-
-
-
-/* .glide {
-	grid-column: 1 / span 2;
-	grid-row: 2 / span 1;
-
-	// outline: 2px solid orange;
-
-	overflow: hidden;
-
-
-	&__container {
-		// outline: 2px solid red;
-		//animation: modeAwards 5s linear infinite;
-
-		will-change: transform;
-		transform: translateZ(0);
-		
-
-		display: flex;
-		flex-direction: row;
-
-		position: relative;
-width: 500px;
-	}
-
-	
-	&__slides{
-
-		
-
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		
-		padding: 0;
-		margin: 0;
-
-		list-style-type: none;
-	}
-
-
-	&__slide{
-
-		img {
-			width: 20vw;
-			//width: calc(100vw / 5);
-position: absolute;
-			height: 20vw;
-			//position: absolute;
-		}
-	}
-	
-}
-
-@keyframes modeAwards {
-	from{
-		transform: translateX(0vw);
-	}
-	to{
-		transform: translateX(-100vw);
-	}
-} */
-
-
-.glide__container{
-	width: 100vw;
+.carousel{
+	//width: 140vw;
 	height: 20vw;
     grid-column: 1 / span 2;
 	grid-row: 2 / span 1;
+
 	//position:relative;
 	//margin:auto;
-	background:blue;
+	
+	//background:blue;
 	overflow:hidden;
+
+	&__slide{
+		width:20vw;
+		height:auto;
+		position: absolute;
+	  }
+
+	  &__slides {
+		position: relative;
+		left: -20vw;
+	  }
 	
   }
-  
-  .glide__slide{
-	width:20vw;
-	height:auto;
-	position:absolute;
-  }
-  
-  .glide__slides {
-	position: relative;
-	//left: -20vw;
-	//right: 20vw;
-  }
+

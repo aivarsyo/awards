@@ -1,47 +1,32 @@
 import "./styles/main.scss";
 import { gsap } from "gsap";
 
-const extraWidth = window.innerWidth/5;
-
-const cloneAwards = () => {
-    const allAwards = document.querySelector(".glide__slides")
-    var cln = allAwards.cloneNode(true)
-    document.querySelector(".glide__container").appendChild(cln)
-
-    console.log("Cloned!")
-}
+const oneFifthOfTheScreen = window.innerWidth/5;
+const slideCount = document.querySelectorAll(".carousel__slide").length;
 
 function carouselAnim(){
 
-    /* gsap.to(".glide__container", 5, {
-x: "-100vw",
-repeat: -1,
-ease: "none"
-    }) */
-
-
-
-    gsap.set(".glide__slide", {
-        x: (i) => i * extraWidth
+    gsap.set(".carousel__slide", {
+        x: (i) => i * oneFifthOfTheScreen
       });
       
       
-      gsap.to(".glide__slide", {
-        duration: 5,
+      gsap.to(".carousel__slide", {
+        duration: 10,
         ease: "none",
-        x: `+=${window.innerWidth}`, //move each box 100vw to right
+        x: `+=${oneFifthOfTheScreen*slideCount}`,
         modifiers: {
-          x: gsap.utils.unitize(x => parseFloat(x) % window.innerWidth) //force x value to be between 0 and 100vw using modulus
+          x: gsap.utils.unitize(x => parseFloat(x) % (oneFifthOfTheScreen*slideCount))
         },
         repeat: -1
       });
-}
 
+      document.querySelector(".carousel").style.width = oneFifthOfTheScreen*slideCount+"px";
+}
 
 
 window.addEventListener("DOMContentLoaded", init);
 
 function init(){
-    //cloneAwards();
     carouselAnim();
 }
