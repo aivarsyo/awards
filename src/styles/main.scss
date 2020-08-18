@@ -1,80 +1,135 @@
 @font-face {
-    font-family: 'Ginto';
-    src: url('../fonts/GintoNordTrial-Regular.woff') format('woff');
-  }
+	font-family: 'Ginto';
+	src: url('../fonts/GintoNordTrial-Regular.woff') format('woff');
+}
 
-  body{
-    font-family: 'Ginto';
-    margin: 0;
-  }
 
-  .awardsblock__h{
-      display: flex;
-      flex-direction: column;
-      font-size: 2vw;
-  }
+body{
+font-family: 'Ginto';
+margin: 0;
+}
 
-  .link--underline{
-      color: black;
-  }
+  
 
-  .awardsblock{
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto auto;
-  }
+.link--underline{
+	color: black;
+}
 
-  .awardsblock__container{
-      grid-column: 1/2;
-      grid-row: 1/2;
-      padding-left: 1vw;
-  }
 
-  .glide{
-      grid-column: 1/3;
-      grid-row: 2/3;
-  }
 
-  .glide__slide img {
-      width: 15vw;
-      height: auto;
-  }
 
-  .glide__slides{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 0;
-  }
 
-  ul{
-      list-style-type: none;
-  }
+.awardsblock{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto auto;
 
+
+
+	&__container{
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 1;
+
+		padding-left: 1vw;
+	}
+
+
+	&__h {
+		display: flex;
+		flex-direction: column;
+		font-size: 2vw;
+	}
+}
+
+
+
+
+
+
+
+/* .glide {
+	grid-column: 1 / span 2;
+	grid-row: 2 / span 1;
+
+	// outline: 2px solid orange;
+
+	overflow: hidden;
+
+
+	&__container {
+		// outline: 2px solid red;
+		//animation: modeAwards 5s linear infinite;
+
+		will-change: transform;
+		transform: translateZ(0);
+		
+
+		display: flex;
+		flex-direction: row;
+
+		position: relative;
+width: 500px;
+	}
+
+	
+	&__slides{
+
+		
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		
+		padding: 0;
+		margin: 0;
+
+		list-style-type: none;
+	}
+
+
+	&__slide{
+
+		img {
+			width: 20vw;
+			//width: calc(100vw / 5);
+position: absolute;
+			height: 20vw;
+			//position: absolute;
+		}
+	}
+	
+}
+
+@keyframes modeAwards {
+	from{
+		transform: translateX(0vw);
+	}
+	to{
+		transform: translateX(-100vw);
+	}
+} */
+
+
+.glide__container{
+	width: 100vw;
+	height: 20vw;
+    grid-column: 1 / span 2;
+	grid-row: 2 / span 1;
+	//position:relative;
+	//margin:auto;
+	background:blue;
+	overflow:hidden;
+	
+  }
+  
   .glide__slide{
-      animation: slideOut 5s linear;
+	width:20vw;
+	height:auto;
+	position:absolute;
   }
-
-  .glide__slide__anim{
-    animation: moveToRight 10s linear infinite;
+  
+  .glide__slides {
+	position: relative;
+	//left: -20vw;
+	//right: 20vw;
   }
-
-@keyframes slideOut {
-    to{
-        transform: translateX(-100vw);
-    }
-}
-
-@keyframes moveToRight{
-    from{
-        transform: translateX(100vw);
-    }
-    to{
-        transform: translateX(-100vw);
-    }
-}
-
-.glide__track{
-    display: flex;
-    flex-direction: row;
-}
