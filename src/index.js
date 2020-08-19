@@ -1,37 +1,6 @@
 import "./styles/main.scss";
-import { gsap } from "gsap";
 
-const oneFifthOfTheScreen = window.innerWidth/5;
-const slideCount = document.querySelectorAll(".carousel__slide").length;
-
-function carouselAnim(){
-
-    gsap.set(".carousel__slide", {
-        x: (i) => i * oneFifthOfTheScreen
-      });
-      
-      
-      gsap.to(".carousel__slide", {
-        duration: 10,
-        ease: "none",
-        x: `+=${oneFifthOfTheScreen*slideCount}`,
-        modifiers: {
-          x: gsap.utils.unitize(x => parseFloat(x) % (oneFifthOfTheScreen*slideCount))
-        },
-        repeat: -1
-      });
-
-      document.querySelector(".carousel").style.width = oneFifthOfTheScreen*slideCount+"px";
-}
-
-
-window.addEventListener("DOMContentLoaded", init);
-
-function init(){
-    carouselAnim();
-}
-
-/* class InfiniteSlider {
+class InfiniteSlider {
 	constructor(animTime = '10000', selector = '.slider', container = '#slider-container') {
 		this.slider = document.querySelector(selector)
 		this.container = document.querySelector(container)
@@ -169,13 +138,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	//IE 11 and lower, fix for width *increasing* as more of the slider is shown
 	if (ie !== false && ie < 12) { slider.getIeWidth() }
 	
-	slider.animate()
-	document.querySelector('#slider-container')
+  slider.animate()
+  
+	/* document.querySelector('#slider-container')
 		.addEventListener('mouseenter', slider.halt.bind(slider))
 	document.querySelector('#slider-container')
-		.addEventListener('mouseleave', slider.go.bind(slider))
+		.addEventListener('mouseleave', slider.go.bind(slider)) */
 	
 	if (ie === 11) {
 		setTimeout(slider.ie11Fix.bind(slider), 1000)
 	}
-}); */
+});

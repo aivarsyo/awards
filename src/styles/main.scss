@@ -7,7 +7,6 @@
 body{
 font-family: 'Ginto';
 margin: 0;
-//overflow: hidden;
 }
 
 .link--underline{
@@ -36,46 +35,14 @@ margin: 0;
 	}
 }
 
-.carousel{
-	//width: 140vw;
-	height: 20vw;
-    grid-column: 1 / span 2;
-	grid-row: 2 / span 1;
-
-	//position:relative;
-	//margin:auto;
-	
-	//background:blue;
-	overflow:hidden;
-
-	&__slide{
-		width:20vw;
-		height:auto;
-		position: absolute;
-		//margin-left: 5vw;
-	  }
-
-	  &__slides {
-		  width: 100%;
-		  height: 100%;
-		//position: relative;
-		//left: -20vw;
-		margin-left: -20vw;
-		overflow: hidden;
-		display: flex;
-		flex-direction: row;
-	  }
-	
-  }
-
-/*   #slider-container {
+  #slider-container {
 	grid-column: 1 / span 2;
 	grid-row: 2 / span 1;
 
-	height: 404px;
+	//height: 404px;
 	width: 100vw;
 	margin: 0 auto;
-	position: relative;
+	//position: relative;
 	overflow: hidden;
 }
 .slider {
@@ -112,4 +79,4 @@ margin: 0;
 	height: auto;
 	max-width: 400px; 
 	max-height: 400px;
-} */
+}
