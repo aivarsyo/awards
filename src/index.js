@@ -1,7 +1,7 @@
 import "./styles/main.scss";
 
 class InfiniteSlider {
-	constructor(animTime = '10000', selector = '.slider', container = '#slider-container') {
+	constructor(animTime = '10000', selector = '.slider__container__track', container = '.slider__container') {
 		this.slider = document.querySelector(selector)
 		this.container = document.querySelector(container)
 		this.width = 0
@@ -140,9 +140,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	
   slider.animate()
   
-	/* document.querySelector('#slider-container')
+	/* document.querySelector('.slider__container')
 		.addEventListener('mouseenter', slider.halt.bind(slider))
-	document.querySelector('#slider-container')
+	document.querySelector('.slider__container')
 		.addEventListener('mouseleave', slider.go.bind(slider)) */
 	
 	if (ie === 11) {
