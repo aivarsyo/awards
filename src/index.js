@@ -16,7 +16,7 @@ const cloneAwards = () => {
 
 function carouselAnim(){
 
-    gsap.to(".glide__container", 5, {
+    gsap.to(".glide__slide img", 5, {
 x:"-100vw",
 repeat: -1,
 ease: "none"
